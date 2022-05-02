@@ -1,0 +1,15 @@
+.contenedor-Grafico-Select {
+  overflow: auto;
+}
+.grafico-Select {
+  height: 300px;
+  width: 100%;
+}
+.contenedor-Grafico-Select::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+}
+.contenedor-Grafico-Select::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background: #00afb3;
+}

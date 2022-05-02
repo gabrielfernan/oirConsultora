@@ -1,0 +1,53 @@
+@puerto=3200
+@connection=keep-alive
+@content=application/json
+
+@dominio=localhost
+
+@protocolo=http
+
+@mainRoute=prueba
+
+
+###
+GET {{protocolo}}://{{dominio}}:{{puerto}}/{{mainRoute}}/listar
+Connection: {{connection}}
+Content-Type: {{content}}
+
+###
+POST {{protocolo}}://{{dominio}}:{{puerto}}/{{mainRoute}}/crear
+Connection: {{connection}}
+Content-Type: {{content}}
+
+{
+    "clave":"clave1",
+    "valor":"valor1"
+}
+
+###
+POST {{protocolo}}://{{dominio}}:{{puerto}}/{{mainRoute}}/obtener
+Connection: {{connection}}
+Content-Type: {{content}}
+
+{
+    "clave":"clave1"
+}
+
+###
+PUT {{protocolo}}://{{dominio}}:{{puerto}}/{{mainRoute}}/modificar
+Connection: {{connection}}
+Content-Type: {{content}}
+
+{
+    "clave":"clave1",
+    "nuevoValor":"nuevoValor16"
+}
+
+###
+DELETE {{protocolo}}://{{dominio}}:{{puerto}}/{{mainRoute}}/eliminar
+Connection: {{connection}}
+Content-Type: {{content}}
+
+{
+    "clave":"clave1"
+}

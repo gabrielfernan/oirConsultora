@@ -1,0 +1,20 @@
+@puerto=3200
+
+@connection=keep-alive
+
+@content-type=application/json
+
+@protocolo=http
+@dominio=localhost
+@mainRoute=encuesta
+
+###
+POST http://localhost:{{puerto}}/contacto/enviar
+Connection: {{connection}}
+Content-Type: {{content-type}}
+
+{
+    "email": "gabriel@oir.com.ar",
+    "mensaje": "Hola necesito que se contacten conmigo porfavor!"
+}
+###

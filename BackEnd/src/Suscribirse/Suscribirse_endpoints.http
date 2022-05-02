@@ -1,0 +1,19 @@
+@puerto=3200
+
+@connection=keep-alive
+
+@content-type=application/json
+
+@protocolo=http
+@dominio=localhost
+@mainRoute=encuesta
+
+###
+POST http://localhost:{{puerto}}/suscribirse/agregar
+Connection: {{connection}}
+Content-Type: {{content-type}}
+
+{
+    "email": "gabriel@oir.com.ar"
+}
+###

@@ -1,0 +1,40 @@
+@puerto=3200
+
+@connection=keep-alive
+
+@content-type=application/json
+
+@protocolo=http
+@dominio=localhost
+@mainRoute=encuesta
+
+###
+POST {{protocolo}}://{{dominio}}:{{puerto}}/{{mainRoute}}/cargar/02072021
+Connection: {{connection}}
+Content-Type: {{content-type}}
+
+{
+    "textoCorto": "texto corto",
+    "desplegable": "2",
+    "nombre": "valor tipo text",
+    "apellido": "valor tipo text",
+    "email": "email",
+    "desplegableDepartamento": "opcione text",
+    "sexo": "tipo text",
+    "edad": 25,
+    "dni":11222333,
+    "telefono":2645963571,
+    "opcionUnica": "on",
+    "opcionMultiple":[
+       {
+           "label": "opcion 2",
+            "value": "2"
+       },
+       {
+        "label": "opcion 1",
+         "value": "1"
+       }
+    ]
+ 
+}
+###

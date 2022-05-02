@@ -1,0 +1,84 @@
+@puerto=3200
+@connection=keep-alive
+@content=application/json
+
+@dominio=localhost
+
+@protocolo=http
+
+@mainRoute=formularios
+
+@token_comun=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJBbGV4aXMiLCJhcGVsbGlkbyI6Ik9ydGl6IiwidXN1YXJpbyI6IkFsZXhpc0xvd2EiLCJlbWFpbCI6ImFsZXhpc0Bsb3dhLmNvbS5hciIsInJvbCI6MiwiaWF0IjoxNjI1MzE5NjM1fQ.9bFk44vbP-7ihfvS9Fs5pNiHGPi2UbFMOFmgMGnF6uA
+
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJHYWJyaWVsIiwiYXBlbGxpZG8iOiJGZXJuYW5kZXoiLCJ1c3VhcmlvIjoiR2FiaUxvd2EiLCJlbWFpbCI6ImdhYnJpZWxAbG93YS5jb20uYXIiLCJyb2wiOjEsImlhdCI6MTYyNTE0OTgxOH0.Qtq1-dCd_euslvJJ2yYoKQF1vvOgpfI_MnsLQIfcO1k
+
+###
+GET {{protocolo}}://{{dominio}}:{{puerto}}/{{mainRoute}}/listar
+Connection: {{connection}}
+Content-Type: {{content}}
+Access-Token: {{token_comun}}
+
+###
+#Crear Formulario
+POST {{protocolo}}://{{dominio}}:{{puerto}}/{{mainRoute}}/alta
+Connection: {{connection}}
+Content-Type: {{content}}
+Access-Token: {{token_comun}}
+
+{
+    "titulo": "Onceava encuesta",
+    "subtitulo": "Subtítulo onceava",
+    "logo": {
+        "value": "",
+        "width": 0,
+        "height": 0 },
+    "ambito": "restringido",
+    "condicion": "manual",
+    "valorCondicion": false,
+    "componentes": [{}],
+    "usuarioId": "60e068d20e9443425c7b548c"
+}
+
+###
+#Eliminar Formulario
+DELETE {{protocolo}}://{{dominio}}:{{puerto}}/{{mainRoute}}/eliminar
+Connection: {{connection}}
+Content-Type: {{content}}
+Access-Token: {{token_comun}}
+
+{
+    "formularioId":"60e06d41aedfb72e288c58c5"
+}
+
+###
+#Modificar Formulario
+PUT {{protocolo}}://{{dominio}}:{{puerto}}/{{mainRoute}}/modificar
+Connection: {{connection}}
+Content-Type: {{content}}
+Access-Token: {{token_comun}}
+
+{
+    "formularioId":"60e0837dc16c033d60c3078b",
+    "titulo": "Décima encuesta EDITANDO nuevamente",
+    "subtitulo": "Subtítulo décima EDITANDO",
+    "logo": {
+        "value": "",
+        "width": 0,
+        "height": 0 },
+    "ambito": "restringido",
+    "condicion": "manual",
+    "valorCondicion": false,
+    "componentes": [{}],
+    "usuarioId": "60e068d20e9443425c7b548c"
+}
+
+###
+#Obtener Formulario
+POST {{protocolo}}://{{dominio}}:{{puerto}}/{{mainRoute}}/obtener
+Connection: {{connection}}
+Content-Type: {{content}}
+Access-Token: {{token_comun}}
+
+{
+    "formularioId":"60e08c851dbee34af88a44b6"
+}

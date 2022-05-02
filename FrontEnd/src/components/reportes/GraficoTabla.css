@@ -1,0 +1,19 @@
+/* .contenedor-Grafico-Tabla {
+  overflow: scroll;
+}
+.grafico-Tabla {
+  height: 300px;
+  width: 100%;
+  min-width: 870px;
+} */
+.contenedor-Grafico-Tabla::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+}
+.contenedor-Grafico-Tabla::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background: #00afb3;
+}
+.contenedor-Grafico-Tabla {
+  overflow: auto !important;
+}

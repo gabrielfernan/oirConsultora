@@ -1,0 +1,8 @@
+.scrollTablaGraficoTexto::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+}
+.scrollTablaGraficoTexto::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background: #00afb3;
+}

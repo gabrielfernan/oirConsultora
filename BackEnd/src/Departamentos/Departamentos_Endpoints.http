@@ -1,0 +1,12 @@
+@puerto=3200
+@connection=keep-alive
+@content=application/json
+
+@dominio=localhost
+
+@protocolo=http
+
+###
+GET {{protocolo}}://{{dominio}}:{{puerto}}/departamentos/listar
+Connection: {{connection}}
+Content-Type: {{content}}

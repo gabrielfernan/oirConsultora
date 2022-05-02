@@ -1,0 +1,36 @@
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJHYWJyaWVsIiwiYXBlbGxpZG8iOiJGZXJuYW5kZXoiLCJ1c3VhcmlvIjoiR2FiaUxvd2EiLCJlbWFpbCI6ImdhYnJpZWxAbG93YS5jb20uYXIiLCJyb2wiOjEsImlhdCI6MTYyNTE0OTgxOH0.Qtq1-dCd_euslvJJ2yYoKQF1vvOgpfI_MnsLQIfcO1k
+
+@token_comun=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJBcnlhIiwiYXBlbGxpZG8iOiJTdGFyayIsInVzdWFyaW8iOiJBbGV4aXNMb3dhIiwiZW1haWwiOiJhbGV4aXNAbG93YS5jb20uYXIiLCJyb2wiOjIsImlhdCI6MTYyNTE1MzI0MH0.QpJTlY7pbOyEz3PnA33Qi0q69js7w7X0q4b9tcrkjaQ
+@content-type=application/json
+@conection=keep-alive
+
+@puerto=3200
+#Usuario->Login
+POST http://localhost:{{puerto}}/usuarios/Login
+Connection: {{conection}}
+Content-Type: {{content-type}}
+
+{
+    "usuario": "GabiF",
+    "password": "Gabi1123"
+}
+
+###
+#Usuario->AltaUsuario
+POST http://localhost:{{puerto}}/usuarios/alta
+Content-Type: {{content-type}}
+Connection: {{conection}}
+Access-Token: {{token}}
+
+{
+    "nombre": "Gabriel",
+    "apellido": "Fernandez",
+    "email": "gabriel@oir.com.ar",
+    "usuario": "Gabi",
+    "password": "0000",
+    "rol": 1,
+    "editandoPertfil":false
+}
+
+###
+

@@ -1,0 +1,7 @@
+FROM node:14.17.1-alpine3.13
+WORKDIR /bd
+COPY ["db.json", "json-server.json", "./"]
+RUN npm install -g json-server 
+EXPOSE 3004
+CMD json-server --watch db.json
+
